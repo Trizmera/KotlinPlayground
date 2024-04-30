@@ -1,16 +1,17 @@
-class Queue<T> {
+class Stack<T> {
+
     private val list = mutableListOf<T>()
 
-    fun enqueue(element: T) {
+    fun push(element: T) {
         list.add(element)
     }
 
-    fun dequeue(): T? {
-        return if (!isEmpty()) list.removeAt(0) else null
+    fun pop(): T? {
+        return if (!isEmpty()) list.removeAt(list.size - 1) else null
     }
 
     fun peek(): T? {
-        return if (!isEmpty()) list[0] else null
+        return if (!isEmpty()) list[list.size - 1] else null
     }
 
     fun isEmpty(): Boolean {

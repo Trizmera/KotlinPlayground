@@ -8,5 +8,14 @@ class Main {
 
             println("Dequeued: ${queue.dequeue()}")
             println("Dequeued: ${queue.dequeue()}")
+
+            val stack = Stack<Int>()
+
+            stack.push(1)
+            stack.push(2)
+            stack.push(3)
+
+            println("Popped: ${stack.pop()}")
+            println("Popped: ${stack.pop()}")
         }
 }
